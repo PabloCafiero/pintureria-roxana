@@ -1,0 +1,62 @@
+
+
+.contenedor {
+
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "inicio  servicios productos"
+        "inicio sobremi   contacto";
+
+        .pagina {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-color: $color1;
+        border: 1px black solid;
+        
+
+            a {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+
+                &:hover{
+                    background-color: $color1;
+
+                    border: $color2 1rem solid;
+                }
+            }
+        }
+
+
+        .pag-inicio {
+            grid-area: inicio;
+        }
+        
+        .pag-servicios {
+            grid-area: servicios;
+        }
+        
+        .pag-productos {
+            grid-area: productos;
+        }
+        
+        .pag-sobremi {
+            grid-area: sobremi;
+        }
+        
+        .pag-contacto {
+            grid-area: contacto;
+        }
+        
+
+}
+
+
