@@ -10,39 +10,32 @@
     border-radius: 30px;
     margin: 200px;
     border: black 1px solid;
-}
 
+    .foto1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-size: cover;
+        flex: 1;
 
-.foto1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        img {
+            display: flex;
+            width: 300px;
+            padding: 1rem;
+            border-radius: 50px;
+        
+        }
+    }
 
-    padding: 1rem;
-
-
-    background-size: cover;
-    flex: 1;
-}
-
-
-.foto1 img {
-    display: flex;
-    width: 300px;
-    height: 300px;
-    padding: 1rem;
-    border-radius: 50px;
-
-
-}
-
-.sobremi p {
-    display: flex;
-    padding: 3rem 3rem 3rem 1rem;
-    text-align: left;
-    font-size: 1rem;
-
-    flex: 1;
+    p {
+        display: flex;
+        padding: 3rem 3rem 3rem 1rem;
+        text-align: left;
+        font-size: 1rem;
+        flex: 1;
+    }
 
 }
+
 
