@@ -1,17 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Italianno&family=Nunito+Sans:ital,opsz@1,6..12&family=Vina+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Italianno&family=Nunito+Sans:ital,opsz@1,6..12&family=Vina+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Azeret+Mono:wght@500&family=Italianno&family=Nunito+Sans:ital,opsz@1,6..12&family=Sora:wght@600&family=Vina+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  position: relative;
   background-color: #EEE5E9 !important;
+  min-height: 100vh;
+  padding-bottom: 25rem;
 }
 
 h1 {
-  font-size: 3rem !important;
+  font-size: 4rem !important;
   font-family: "Italianno" !important;
   padding: 5px !important;
   text-align: center;
@@ -38,6 +46,11 @@ h1 {
   align-items: center;
   gap: 1rem;
 }
+@media (max-width: 930px) {
+  .navegador .lista-menu {
+    flex-direction: column;
+  }
+}
 .navegador .lista-menu .seleccionado {
   display: flex;
   align-items: center;
@@ -49,20 +62,20 @@ h1 {
   display: flex;
   align-items: center;
   font-family: "Anton";
-  width: 125px;
+  width: 150px;
   padding: 10px;
   margin: 10px 0px 10px 10px;
 }
 .navegador .lista-menu .link2 {
   color: white;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: sans-serif;
 }
 .navegador .lista-menu .link {
   color: black;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: sans-serif;
 }
 
@@ -79,7 +92,10 @@ h1 {
   align-items: center;
   justify-content: center;
   border: 1px black solid;
-  background-color: #98C1D9;
+  background-color: #FBD87F;
+  font-family: "Azeret Mono", monospace;
+  font-size: 3.5rem;
+  font-weight: 800;
 }
 .contenedor .pagina a {
   display: flex;
@@ -89,14 +105,21 @@ h1 {
   justify-content: center;
   text-decoration: none;
   color: black;
-  font-size: 2rem;
 }
 .contenedor .pagina a:hover {
-  border: #6969B3 1rem solid;
+  border: black 1rem solid;
+}
+.contenedor .pagina .titulo-menu {
+  font-size: 6rem !important;
+  font-family: "Italianno" !important;
+  padding: 5px !important;
+  text-align: center;
+  color: black;
+  font-weight: bold !important;
 }
 .contenedor .pag-inicio {
   grid-area: inicio;
-  background-image: url("../img/empresa.JPG");
+  background-image: url("../img/inicio.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -139,6 +162,7 @@ h1 {
   background-color: #FBD87F;
   border: black 2px solid;
   border-radius: 30px;
+  font-size: 1.5rem;
 }
 
 .seccion {
@@ -152,15 +176,37 @@ h1 {
 }
 .seccion p {
   margin: 20px;
+  font-size: 1.5rem;
+}
+@media (max-width: 992px) {
+  .seccion p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .seccion p {
+    font-size: 0.7rem;
+  }
 }
 .seccion h2 {
   text-align: center;
   margin: 10px;
   font-family: Arial, sans-serif;
+  font-size: 3rem;
+}
+@media (max-width: 992px) {
+  .seccion h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .seccion h2 {
+    font-size: 1.2rem;
+  }
 }
 .seccion .imagenes-serv {
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 600px;
   border: black 2px solid;
   z-index: 0;
 }
@@ -170,8 +216,8 @@ h1 {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
-  margin: 70px 200px 70px 200px;
+  gap: 100px;
+  margin: 100px auto;
 }
 .contenedor1 .producto {
   display: flex;
@@ -257,7 +303,6 @@ h1 {
   flex: 1;
 }
 .contacto0 .contacto1 h2 {
-  margin-right: 6rem;
   color: black;
   font-size: 2rem;
   font-family: sans-serif;
@@ -312,12 +357,13 @@ h1 {
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
   display: flex;
+  justify-content: center;
   background-color: black;
   color: white;
   width: 100%;
-  border: black 1px solid;
   padding: 10rem;
-  justify-content: center;
   border-top: 10px #FBD87F solid;
 }/*# sourceMappingURL=estilos.css.map */

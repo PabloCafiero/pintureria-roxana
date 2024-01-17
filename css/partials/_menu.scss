@@ -16,7 +16,11 @@
         align-items: center;
         justify-content: center;
         border: 1px black solid;
-        background-color: $color1;
+        background-color: #FBD87F;
+        font-family: 'Azeret Mono', monospace;
+        font-size: 3.5rem;
+        font-weight: 800;
+
         
 
             a {
@@ -27,23 +31,34 @@
                 justify-content: center;
                 text-decoration: none;
                 color: black;
-                font-size: 2rem;
 
                 &:hover{
-                    border: $color2 1rem solid;
+                    border: black 1rem solid;
                 }
+
+            }
+            .titulo-menu{
+                font-size: 6rem !important;
+                font-family: "Italianno" !important;
+                padding: 5px!important;
+                text-align: center;
+                color: black;
+                font-weight: bold!important;
             }
         }
 
 
         .pag-inicio {
             grid-area: inicio;
-            background-image: url("../img/empresa.JPG");
+            background-image: url("../img/inicio.JPG");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+           
+            
         }
-        
+    
+
         .pag-servicios {
             grid-area: servicios;
         }

@@ -6,6 +6,7 @@
     background-color: #FBD87F;
     border: black 2px solid;
     border-radius: 30px;
+    font-size: 1.5rem;
 }
 
 .seccion {
@@ -19,20 +20,38 @@
 
     p {
         margin: 20px;
+        font-size: 1.5rem;
+
+        @media (max-width: 992px) {
+            font-size: 1rem;
+        }
+        @media (max-width: 500px) {
+            font-size: 0.7rem;
+        }
+
     }
 
     h2 {
         text-align: center;
         margin: 10px;
         font-family: Arial,sans-serif;
+        font-size: 3rem;
+
+        @media (max-width: 992px) {
+            font-size: 2rem;
+        }
+        @media (max-width: 500px) {
+            font-size: 1.2rem;
+        }
     }
     .imagenes-serv{
         margin: 0 auto;
-        max-width: 400px;
+        max-width: 600px;
         border: black 2px solid;
         z-index: 0;
     }
 }
+
 
 
 
