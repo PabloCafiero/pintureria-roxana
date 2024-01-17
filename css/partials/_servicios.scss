@@ -1,12 +1,14 @@
 
 .lista-servicios{
     
-    color: black !important;
     margin: 5rem;
     background-color: #FBD87F;
     border: black 2px solid;
     border-radius: 30px;
     font-size: 1.5rem;
+    .nav-link{
+        color: black;
+    }
 }
 
 .seccion {

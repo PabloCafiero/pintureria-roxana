@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-  font-size: 4rem !important;
+  font-size: 5rem !important;
   font-family: "Italianno" !important;
   padding: 5px !important;
   text-align: center;
@@ -27,56 +27,55 @@ h1 {
   font-weight: bold !important;
 }
 
-.navegador {
+.navegador1 {
   text-align: center;
+  justify-content: center;
   background-color: #FBD87F;
   border: black 3px solid;
   position: sticky;
   width: 100%;
   top: 0;
-  font-size: 1.5rem;
-  font-family: sans-serif;
   z-index: 10;
 }
-.navegador .lista-menu {
+.navegador1 .lista-menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  font-size: 2rem;
+  font-family: sans-serif;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-@media (max-width: 930px) {
-  .navegador .lista-menu {
+@media (max-width: 960px) {
+  .navegador1 .lista-menu {
     flex-direction: column;
   }
 }
-.navegador .lista-menu .seleccionado {
+.navegador1 .lista-menu .seleccionado {
   display: flex;
   align-items: center;
+  width: 170px;
   background-color: black;
   border-radius: 100px;
   padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 20px 0;
 }
-.navegador .lista-menu .no-seleccionado {
+.navegador1 .lista-menu .no-seleccionado {
   display: flex;
   align-items: center;
-  font-family: "Anton";
-  width: 150px;
-  padding: 10px;
-  margin: 10px 0px 10px 10px;
+  width: 170px;
+  border-radius: 100px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 20px 0;
 }
-.navegador .lista-menu .link2 {
+.navegador1 .lista-menu .link2 {
   color: white;
   text-decoration: none;
-  font-size: 2rem;
-  font-family: sans-serif;
 }
-.navegador .lista-menu .link {
+.navegador1 .lista-menu .link {
   color: black;
   text-decoration: none;
-  font-size: 2rem;
-  font-family: sans-serif;
 }
 
 .contenedor {
@@ -157,12 +156,14 @@ h1 {
 }
 
 .lista-servicios {
-  color: black !important;
   margin: 5rem;
   background-color: #FBD87F;
   border: black 2px solid;
   border-radius: 30px;
   font-size: 1.5rem;
+}
+.lista-servicios .nav-link {
+  color: black;
 }
 
 .seccion {
@@ -217,7 +218,7 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 100px;
-  margin: 100px auto;
+  margin: 70px 200px 70px 200px;
 }
 .contenedor1 .producto {
   display: flex;
@@ -232,6 +233,7 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 200px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   border: black 2px solid;
@@ -257,35 +259,42 @@ h1 {
 }
 
 .sobremi {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "foto1  texto1" "foto1  texto2" "texto3 foto2" "texto4 foto2";
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
   background-color: #FBD87F;
   border-radius: 30px;
-  margin: 200px;
+  margin: 5rem auto;
+  max-width: 2300px;
   border: black 1px solid;
 }
-.sobremi .foto1 {
+.sobremi .foto {
+  border: 1px red solid;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  background-size: cover;
-  flex: 1;
+  max-width: 700px;
 }
-.sobremi .foto1 img {
-  display: flex;
-  width: 300px;
-  padding: 1rem;
-  border-radius: 50px;
+.sobremi .texto {
+  border: 1px red solid;
+  font-size: 1.7rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
 }
-.sobremi p {
-  display: flex;
-  padding: 3rem 3rem 3rem 1rem;
-  text-align: left;
-  font-size: 1rem;
-  flex: 1;
+.sobremi .foto1 {
+  grid-area: foto1;
+}
+.sobremi .texto1 {
+  grid-area: texto1;
+}
+.sobremi .foto2 {
+  grid-area: foto2;
+}
+.sobremi .texto2 {
+  grid-area: texto2;
 }
 
 .contacto0 {
@@ -294,6 +303,11 @@ h1 {
   justify-content: center;
   margin-top: 50px;
 }
+@media (max-width: 960px) {
+  .contacto0 {
+    flex-direction: column;
+  }
+}
 .contacto0 .contacto1 {
   display: flex;
   flex-direction: column;
@@ -301,6 +315,11 @@ h1 {
   justify-content: center;
   align-items: flex-end;
   flex: 1;
+}
+@media (max-width: 960px) {
+  .contacto0 .contacto1 {
+    align-items: center;
+  }
 }
 .contacto0 .contacto1 h2 {
   color: black;
@@ -311,7 +330,7 @@ h1 {
   display: block;
   color: black;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: sans-serif;
   padding-bottom: 0.5rem;
 }
@@ -335,7 +354,7 @@ h1 {
   display: block;
   color: black;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: sans-serif;
   padding: 0.2rem;
 }
@@ -344,6 +363,11 @@ h1 {
   flex-direction: column;
   padding: 2rem;
   flex: 1;
+}
+@media (max-width: 960px) {
+  .contacto0 .contacto2 {
+    align-items: center;
+  }
 }
 .contacto0 .contacto2 h3 {
   color: black;

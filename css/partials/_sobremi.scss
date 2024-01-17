@@ -1,40 +1,57 @@
 
 .sobremi {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "foto1  texto1"
+        "foto1  texto2"
+        "texto3 foto2"
+        "texto4 foto2";
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
 
     background-color: #FBD87F;
 
     border-radius: 30px;
-    margin: 200px;
+    margin: 5rem auto;
+    max-width: 2300px;
+
     border: black 1px solid;
 
-    .foto1 {
+    .foto{
+        border: 1px red solid;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1rem;
-        background-size: cover;
-        flex: 1;
+        max-width: 700px;
+    }
 
-        img {
-            display: flex;
-            width: 300px;
-            padding: 1rem;
-            border-radius: 50px;
+    .texto{
+        border: 1px red solid;
+        font-size: 1.7rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 2rem;
+    }
+
+
+    .foto1{
+        grid-area: foto1;
         
-        }
     }
 
-    p {
-        display: flex;
-        padding: 3rem 3rem 3rem 1rem;
-        text-align: left;
-        font-size: 1rem;
-        flex: 1;
+    .texto1{
+        grid-area: texto1;
     }
+
+    .foto2{
+        grid-area: foto2;
+    }
+
+    .texto2{
+        grid-area: texto2;
+    }
+
 
 }
 
