@@ -12,24 +12,37 @@
     align-items: center;
 
     background-color: #FBD87F;
-
     border-radius: 30px;
-    margin: 5rem auto;
-    max-width: 2300px;
-
+    margin: 5rem ;
     border: black 1px solid;
 
+    @media (max-width: 1350px) {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "foto1"
+        "texto1"
+        "texto2"
+        "foto2"
+        "texto3"
+        "texto4";
+
+    }
+
     .foto{
-        border: 1px red solid;
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 700px;
+        img{
+            max-width: 800px;
+            border-radius: 20px;
+        }
+
     }
 
     .texto{
-        border: 1px red solid;
-        font-size: 1.7rem;
+        font-size: 1.2rem;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         padding: 2rem;
     }
@@ -51,6 +64,7 @@
     .texto2{
         grid-area: texto2;
     }
+
 
 
 }
