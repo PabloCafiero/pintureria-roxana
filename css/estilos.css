@@ -113,10 +113,10 @@ h1 {
 }
 .contenedor .pag-inicio {
   grid-area: inicio;
-  background-image: url("../../img/inicio.jpg");
+  background-image: url("../img/inicio.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 .contenedor .pag-servicios {
   grid-area: servicios;
