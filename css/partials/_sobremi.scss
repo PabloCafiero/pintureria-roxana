@@ -16,35 +16,42 @@
     margin: 5rem ;
     border: black 1px solid;
 
-    @media (max-width: 1350px) {
-        display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-        "foto1"
-        "texto1"
-        "texto2"
-        "foto2"
-        "texto3"
-        "texto4";
-
-    }
 
     .foto{
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
         img{
             max-width: 800px;
             border-radius: 20px;
-        }
+            @media (max-width: 830px) {
+            max-width: 400px;
+            }
+            @media (max-width: 600px) {
+                max-width: 250px;
+            }
+            @media (max-width: 450px) {
+                max-width: 150px;
+            }
 
+        }
     }
  
     .texto{
         font-size: 1.2rem;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         padding: 2rem;
+        margin: 1rem;
+        @media (max-width: 830px) {
+            font-size: 1rem;
+        }
+        @media (max-width: 600px) {
+            font-size: 0.8rem;
+        }
+        @media (max-width: 450px) {
+            font-size: 0.6rem;
+        }
     }
 
 
@@ -65,7 +72,14 @@
         grid-area: texto2;
     }
 
+    @media (max-width: 600px) {
+        margin: 3rem;
+    }
 
+    @media (max-width: 1350px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
