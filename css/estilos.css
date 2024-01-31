@@ -18,6 +18,10 @@ body {
   padding-bottom: 25rem;
 }
 
+.body-menu {
+  padding-bottom: 0rem;
+}
+
 h1 {
   font-size: 4rem !important;
   font-family: "Italianno" !important;
@@ -181,6 +185,13 @@ h1 {
 @media (max-width: 700px) {
   .lista-servicios {
     font-size: 1rem;
+    margin: 2rem;
+  }
+}
+@media (max-width: 310px) {
+  .lista-servicios {
+    margin: 1rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -195,7 +206,13 @@ h1 {
 }
 @media (max-width: 700px) {
   .seccion {
-    margin: 50px;
+    margin: 2rem;
+  }
+}
+@media (max-width: 310px) {
+  .seccion {
+    margin: 1rem;
+    padding: 10px;
   }
 }
 .seccion p {
